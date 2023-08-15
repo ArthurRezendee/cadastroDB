@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProjetoDB</title>
+  <link rel="icon" href="../images/sqlicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+
+  <h1>
+    Cadastro <a id="title">DB</a>
+  </h1>
+
+  <div id="menu" class="menu">
+    <ul class="lista">
+      <a href="index.html" class="list">
+        <li>
+          <p1><span>Página</span> Inicial </p1>
+        </li>
+      </a>
+      <a href="../php/visualizar.php" class="list">
+        <li>
+          <p1><span>Visualizar</span> DB </p1>
+        </li>
+      </a>
+      <a href="sobre.html" class="list">
+        <li>
+          <p1><span>Sobre</span> o Projeto </p1>
+        </li>
+      </a>
+      <a href="delete.html" class="list">
+        <li>
+          <p1><span>Deletar</span> Cadastro </p1>
+        </li>
+      </a>
+      <a href="alterar.html" class="list">
+        <li>
+          <p1><span>Alterar</span> Registro</p1>
+        </li>
+      </a>
+
+    </ul>
+  </div>
+
+  <div id="toggle" class="toggle-button">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="container form d-flex align-items-center justify-content-center">
+    <form action="../php/cadastro.php" method="POST" , id="formulario">
+      <label for="nickname">Username:</label>
+      <br>
+      <input type="text" id="nickname" name="nickname" required class="campo" autocomplete="off">
+      <br>
+      <br>
+      <br>
+      <label for="email">E-mail:</label>
+      <br>
+      <input type="email" id="email" name="email" required class="campo" autocomplete="off">
+      <br>
+      <br>
+      <br>
+      <label for="password">Senha:</label>
+      <br>
+      <input type="password" id="password" name="password" required class="campo" autocomplete="off">
+      <br>
+      <br>
+      <br>
+      <label for="confirm_password">Confirmar Senha:</label>
+      <br>
+      <input type="password" id="confirm_password" name="confirm_password" required class="campo" autocomplete="off">
+      <br>
+      <br>
+      <br>
+      <div class="botoes">
+        <input type="submit" value="Cadastrar" class="botao">
+        <a href="delete.html" name="delete" class="botao">Deletar</a>
+        <a href="alterar.html" name="alter" class="botao">Alterar</a>
+        <a href="../php/visualizar.php" name="visu" class="botao">Visualizar</a>
+
+
+
+
+      </div>
+
+
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+  </script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
