@@ -1,4 +1,4 @@
-Cadastro DB é um projeto de um formuláio de login criado por mim na qual foram usadas as linguagens:
+Cadastro DB é um projeto de um formulário de login criado por mim na qual foram usadas as linguagens:
 PHP, HTML, CSS, SQL e JAVASCRIPT.
 Nesse projeto você pode inserir, alterar, deletar e visualizar cadastros realizados.
 
