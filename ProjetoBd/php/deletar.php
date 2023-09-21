@@ -1,9 +1,6 @@
 <?php
 require_once 'conexao.php';
 
-$success_message = '';
-$error_message = '';
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete'])) {
@@ -22,14 +19,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $sql_delete = "DELETE FROM cadastro WHERE nickname = '$nickname' AND senha = '$password'";
                 if ($conn->query($sql_delete) === TRUE) {
                   echo "<script type= 'text/javascript'>alert('Exclusão bem sucedida!');";
-                  echo "javascript:window.location='../delete.html';</script>";
+                  echo "javascript:window.location='../html/delete.html';</script>";
                 } else {
                   echo "<script type= 'text/javascript'>alert('Erro ao deletar dados do usuário!');";
-                  echo "javascript:window.location='../delete.html';</script>";
+                  echo "javascript:window.location='../html/delete.html';</script>";
                 }
             } else {
               echo "<script type= 'text/javascript'>alert('Usuário ou senha incorretos!');";
-              echo "javascript:window.location='../delete.html';</script>";
+              echo "javascript:window.location='../html/delete.html';</script>";
             }
         }
     }
@@ -38,4 +35,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $conn->close();
 ?>
-

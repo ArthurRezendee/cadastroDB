@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       if (mysqli_stmt_num_rows($stmt) > 0) {
         echo "<script type= 'text/javascript'>alert('Usuário já existente!');";
-          echo "javascript:window.location='../index.html';</script>";
+          echo "javascript:window.location='../html/index.html';</script>";
       } else {
     // Insere os dados no banco de dados
         $sql = "INSERT INTO cadastro (nickname, email, senha) VALUES (?, ?, ?)";
@@ -30,16 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_bind_param($stmt, "sss", $nickname, $email, $senha);
         if (mysqli_stmt_execute($stmt)) {
           echo "<script type= 'text/javascript'>alert('Cadastro realizado com sucesso!');";
-          echo "javascript:window.location='../index.html';</script>";
+          echo "javascript:window.location='../html/index.html';</script>";
         } else {
           echo "<script type= 'text/javascript'>alert('Erro ao cadastrar usuário!');";
-          echo "javascript:window.location='../index.html';</script>";
+          echo "javascript:window.location='../html/index.html';</script>";
         }
       }
     }
     else{
       echo "<script type= 'text/javascript'>alert('As senhas não correspondem!');";
-      echo "javascript:window.location='../index.html';</script>";
+      echo "javascript:window.location='../html/index.html';</script>";
     }
     // Fecha a conexão com o banco de dados
     $conn->close();
