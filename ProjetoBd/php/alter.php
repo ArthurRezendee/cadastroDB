@@ -9,12 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
   // Recupera os dados do formulário
-  $nickname = $_POST['nickname_atual'];
-  $senha = $_POST['senha_atual'];
-  $newnick = $_POST['novo_nickname'];
+ $nickname = mysqli_real_escape_string($conn, $_POST['nickname_atual']);
+  $senha = mysqli_real_escape_string($conn, $_POST['senha_atual']);  
+  $newnick =mysqli_real_escape_string($conn, $_POST['novo_nickname']);
   $newemail = $_POST['novo_email'];
-  $newpassword = $_POST['nova_senha'];
-  $connewpass = $_POST['confirmar_senha'];
+  $newpassword =mysqli_real_escape_string($conn, $_POST['nova_senha']);
+  $connewpass = mysqli_real_escape_string($conn, $_POST['confirmar_senha']);
 
   if ($newpassword == $connewpass) {
 
@@ -31,19 +31,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query_rum = mysqli_query($conn, $sql_update);
         if ($query_rum) {
           echo "<script type= 'text/javascript'>alert('Alteração bem sucedida!');";
-      echo "javascript:window.location='../html/alterar.html';</script>";
+      echo "javascript:window.location='../alterar.html';</script>";
         } else {
           echo "<script type= 'text/javascript'>alert('Erro ao alterar usuário!');";
-      echo "javascript:window.location='../html/alterar.html';</script>";
+      echo "javascript:window.location='../alterar.html';</script>";
         }
       } else {
         echo "<script type= 'text/javascript'>alert('Usuário ou senha incorretos!');";
-      echo "javascript:window.location='../html/alterar.html';</script>";
+      echo "javascript:window.location='../alterar.html';</script>";
       }
     }
   } else {
     echo "<script type= 'text/javascript'>alert('As senhas não correspondem!');";
-      echo "javascript:window.location='../html/alterar.html';</script>";
+      echo "javascript:window.location='../alterar.html';</script>";
   }
 
 
